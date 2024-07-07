@@ -15,17 +15,13 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 password = []
 
 for l in range(0,nr_letters):
-    letra = letters[random.randint(0,len(letters)-1)]
-    password.append(letra)
+    password.append(random.choice(letters)) # random.choice(x) selecciona un indice random en la lista x
 
 for s in range(0,nr_symbols):
-    simbolo = symbols[random.randint(0,len(symbols)-1)]
-    password.append(simbolo)
+    password.append(symbols[random.randint(0,len(symbols)-1)])
     
-
 for n in range(0,nr_numbers):
-    numero = numbers[random.randint(0,len(numbers)-1)]
-    password.append(numero)
+    password.append(numbers[random.randint(0,len(numbers)-1)])
 
 Password = "Tu contraseña es: "+ "".join(password) # Join unir lista a string
 print(Password)
@@ -34,12 +30,14 @@ print(Password)
 #Hard Level - Order of characters randomised:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
 
-Password = ""
+random.shuffle(password) # random.shuffle(x) cambia el orden de la lista x de manera aleatoria
 
-for pas in range(0,len(password)):
-    temp = random.randint(0,len(password)-1)
-    Password += password[temp]
-    password.remove(password[temp])
+# De manera manual ir metiendo un indice de la lista de forma aleatoria 
 
-Password = "Tu contraseña aleatoria es: " + Password
+# for pas in range(0,len(password)):
+#     temp = random.randint(0,len(password)-1)
+#     Password += password[temp]
+#     password.remove(password[temp])
+
+Password = "Tu contraseña aleatoria es: " + "".join(password)
 print(Password)
