@@ -36,10 +36,10 @@ print(Password)
 
 Password = ""
 
-for pas in range(0,len(password)-1):
-    Password.join(password[random.randint(0,len(password)-1)])
-    password.remove.index(Password[pas])
+for pas in range(0,len(password)):
+    temp = random.randint(0,len(password)-1)
+    Password += password[temp]
+    password.remove(password[temp])
 
-#password = password[random.randint(0,len(Password)-1)]
-Password = "Tu contraseña es: " + Password
+Password = "Tu contraseña aleatoria es: " + Password
 print(Password)
