@@ -23,29 +23,29 @@ print('''
  |~   \      ,'~~|  " (o o)   "         " " |~~~ \_,-' ~ `.     ,'~~ |
  | ~~ ~|__,-'~~~~~\    \"/      "  "   "    /~ ~~   O ~ ~~`-.__/~ ~~~|
  |~~~ ~~~  ~~~~~~~~`.______________________/ ~~~    |   ~~~ ~~ ~ ~~~~|
- |____~jrei~__~_______~~_~____~~_____~~___~_~~___~\_|_/ ~_____~___~__|
+ |____~____~__~_______~~_~____~~_____~~___~_~~___~\_|_/ ~_____~___~__|
  / \----- ----- ------------  ------- ----- -------  --------  -------/
  \_/__________________________________________________________________/
       ''')
 
-print ('''Welcome to Treasure island
-Your mission is to find the tresure!! ''')
+print ('''Bienvenido a la isla del tesoro
+¡Tu misión es encontrar el tesoro! ''')
 
-LR = input('You\'re at a cross road. Where do you want to go? Type "left" or "right" \n').lower()
-if LR == "left":
+LR = input('Estás en una encrucijada. ¿A dónde quieres ir? Escribe "izquierda" o "derecha" \n').lower()
+if LR == "izquierda":
 
-    SW = input('You\'ve come to a lake. There is an island in the middle of the lake. Type "wait" to wait for a boat. Type "swim" to swim across. \n').lower()
-    if SW == "wait":
+    SW = input('Has llegado a un pueblo. Hay un vendedor vendiendo manzanas y pescado. Escribe "manzanas" para comprar manzanas. Escribe "pescado" para comprar pescado. \n').lower()
+    if SW == "manzanas":
 
-        Door = input("You arrive at the island unharmed. There is a house with 3 doors. One red, one yellow and one blue. Which colour do you choose? \n").lower()
-        if Door == "yellow":
-            print ("You found the treasure! You Win!")
-        elif Door == "red":
-            print("It's a room full of fire. Game Over.")
-        elif Door == "blue":
-            print("You enter a room of beasts. Game Over.")
-        else : print("You chose a door that doesn't exist. Game Over.")
+        Door = input("Sigues tu aventura y te encaminas hacia el bosque. Hay una casa con 3 puertas. Un sendero oscuro, un sendero lleno de arboles y uno completamente despejado. ¿Qué sendero eliges? 'oscuro', 'arboles' o 'despejado' \n").lower()
+        if Door == "arboles":
+            print ("¡Encontraste el tesoro! ¡Ganaste!")
+        elif Door == "despejado":
+            print("Nada te protege del sol durante el dia y no puedes hacer fuego por la noche. Fin del juego.")
+        elif Door == "oscuro":
+            print("Esta lleno de bestias. Fin del juego.")
+        else : print("Elegiste un sendero que no existe. Fin del juego.")
 
-    else : print("You get attacked by an angry trout. Game Over.")
+    else : print("El pescado estaba en mal estado y no puedes seguir. Fin del juego.")
 
-else : print("You fell into a hole. Game Over.")
+else : print("Te perdiste en el desierto. Fin del juego.")

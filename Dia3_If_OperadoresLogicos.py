@@ -88,7 +88,7 @@ name2 = input("\nWhat is their name?\n")
 
 name_combination = name1 + name2 # Combinamos los dos nombres
 
-name_low = name_combination.lower() #La funcion .lowe() pasa a minusculas el texto
+name_low = name_combination.lower() #La funcion .lower() pasa a minusculas el texto
 
 score1 = 0 # Score para la palabra true ( Cuenta en los nombres las letras T R U E )
 score2 = 0 # Score para la palabra love ( Cuenta en los nombres las letras L O V E )

@@ -1,4 +1,5 @@
-rock = '''
+# Proyecto piedra, papel o tijera contra computadora
+piedra = '''
     _______
 ---'   ____)
       (_____)
@@ -6,10 +7,10 @@ rock = '''
       (____)
 ---.__(___)
 
-=== ROCK ===
+=== PIEDRA ===
 '''
 
-paper = '''
+papel = '''
     _______
 ---'   ____)____
           ______)
@@ -17,10 +18,10 @@ paper = '''
          _______)
 ---.__________)
 
-=== PAPER ===
+=== PAPEL ===
 '''
 
-scissors = '''
+tijera = '''
     _______
 ---'   ____)____
           ______)
@@ -28,27 +29,32 @@ scissors = '''
       (____)
 ---.__(___)
 
-=== SCISSORS ===
+=== TIJERA ===
 '''
 
 import random
+import os # para cls, nos permite entrar a "operating system-specific functions"
 
-RPS = input("\nWhat do you choose? (rock / paper / scissors)\n").lower()
+os.system('cls' if os.name == 'nt' else 'clear')  # Limpia la pantalla, cls para windows y clear para linux/macOS
 
-options = ["r","p","s"]
-print_options = [rock,paper,scissors]
+eleccion = input("\n¿Qué eliges? (piedra / papel / tijera)\n").lower()
 
-user = options.index(RPS[0])
+opciones = ["piedra","papel","tijera"]
+imprimir_opciones = [piedra,papel,tijera]
 
-print ("\nYour choose\n", print_options[user], "\n")
+usuario = opciones.index(eleccion)
 
-computer = random.randint(0,2)
+os.system('cls' if os.name == 'nt' else 'clear')
 
-print ("\nComputer choose\n", print_options[computer], "\n")
+print ("\nTu elección\n", imprimir_opciones[usuario], "\n")
 
-if (user == 0 and computer == 2) or (user == 1 and computer == 0) or (user == 2 and computer == 1):
-    print ("You win!!\n")
-elif user == computer:
-    print ("Tied!!\n")
+computadora = random.randint(0,2)
+
+print ("\nLa computadora eligió\n", imprimir_opciones[computadora], "\n")
+
+if (usuario == 0 and computadora == 2) or (usuario == 1 and computadora == 0) or (usuario == 2 and computadora == 1):
+    print ("¡Ganaste!\n")
+elif usuario == computadora:
+    print ("¡Empate!\n")
 else:
-    print ("You loose :(\n")
+    print ("Perdiste :(\n")
